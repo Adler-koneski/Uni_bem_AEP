@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <title>Banco de Alimentos • Doações</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./script.js"></script>
+</head>
+<body data-page="doacoes">
+  <header class="govbar">
+    <div class="container">
+      <a class="logo" href="./index.html">Banco de Alimentos</a>
+      <nav class="topnav">
+        <a href="./index.html">Início</a>
+        <a href="./doadores.html">Doadores</a>
+        <a href="./instituicoes.html">Instituições</a>
+        <a href="./itens.html">Itens</a>
+        <a href="./doacoes.html" class="active">Doações</a>
+        <a href="./entregas.html">Entregas</a>
+        <a href="./estoque.html">Estoque</a>
+        <a href="./relatorios.html">Relatórios</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="panel-title">Registrar Doação</div>
+      <form class="form" id="formDonation">
+        <input id="donorId" type="number" placeholder="ID do Doador" required />
+        <input id="recvAt" type="datetime-local" placeholder="Recebida em" />
+        <input id="dItemId" type="number" placeholder="ID do Item" required />
+        <input id="dLot" placeholder="Código do Lote" required />
+        <input id="dExp" type="date" placeholder="Validade" required />
+        <input id="dQty" type="number" step="0.001" value="1" placeholder="Quantidade" required />
+        <button class="btn">Salvar Doação</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">Estoque (ajuda a escolher lote/item)</div>
+      <button class="btn ghost" id="donReload">Atualizar</button>
+      <table class="table" id="donStock">
+        <thead><tr><th>Lote</th><th>Item</th><th>Validade</th><th>Dias</th><th>Qtd</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><small>MVP acadêmico</small></div></footer>
+</body>
+</html>

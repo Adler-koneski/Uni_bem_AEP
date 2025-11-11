@@ -1,0 +1,58 @@
+:root{
+  --green:#1b5e20;
+  --green-2:#2e7d32;
+  --bg:#f7f9fb;
+  --panel:#ffffff;
+  --text:#223;
+  --muted:#5b6678;
+  --border:#e6eaef;
+  --shadow:0 8px 24px rgba(0,0,0,.06);
+  --radius:14px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+body{background:var(--bg);color:var(--text)}
+
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* topo */
+.govbar{background:var(--green);color:#fff;position:sticky;top:0;z-index:10}
+.govbar .container{display:flex;align-items:center;gap:24px;min-height:64px}
+.logo{font-weight:700;color:#fff;text-decoration:none}
+.topnav{display:flex;gap:10px;flex-wrap:wrap}
+.topnav a{color:#cde;cursor:pointer;padding:8px 10px;border-radius:10px;text-decoration:none}
+.topnav a:hover{background:rgba(255,255,255,.1)}
+.topnav a.active{background:#fff;color:var(--green);font-weight:600}
+
+/* hero */
+.hero{background:linear-gradient(90deg,var(--green),var(--green-2));color:#fff;padding:26px 0}
+.hero h1{margin:0 0 6px}
+.badge{display:inline-block;background:#fff;color:var(--green);padding:6px 10px;border-radius:999px;font-weight:600}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px auto}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+.kpi{font-size:28px;font-weight:800;margin-top:8px}
+
+/* painéis e layout */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin:12px 0}
+.panel-title{font-weight:700;margin-bottom:10px}
+
+.table{width:100%;border-collapse:separate;border-spacing:0}
+.table thead th{text-align:left;color:var(--muted);font-size:14px;padding:8px 10px;border-bottom:1px solid var(--border)}
+.table tbody td{padding:10px;border-bottom:1px solid var(--border)}
+.table tbody tr:hover{background:#fafcff}
+
+.form{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.form.inline{grid-template-columns:repeat(3,auto)}
+input,select,button{padding:10px;border:1px solid var(--border);border-radius:10px;font-size:14px}
+input:focus{outline:2px solid #cfe8d0;border-color:#cfe8d0}
+.btn{background:var(--green-2);border-color:transparent;color:#fff;cursor:pointer}
+.btn:hover{filter:brightness(.96)}
+.btn.ghost{background:#fff;color:var(--green-2);border:1px solid var(--green-2)}
+
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+
+.footer{padding:24px 0;color:var(--muted)}

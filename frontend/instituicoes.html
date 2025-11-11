@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <title>Banco de Alimentos • Instituições</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./script.js"></script>
+</head>
+<body data-page="instituicoes">
+  <header class="govbar">
+    <div class="container">
+      <a class="logo" href="./index.html">Banco de Alimentos</a>
+      <nav class="topnav">
+        <a href="./index.html">Início</a>
+        <a href="./doadores.html">Doadores</a>
+        <a href="./instituicoes.html" class="active">Instituições</a>
+        <a href="./itens.html">Itens</a>
+        <a href="./doacoes.html">Doações</a>
+        <a href="./entregas.html">Entregas</a>
+        <a href="./estoque.html">Estoque</a>
+        <a href="./relatorios.html">Relatórios</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="panel-title">Cadastrar Instituição</div>
+      <form class="form" id="formInst">
+        <input id="inome" placeholder="Nome" required />
+        <input id="icnpj" placeholder="CNPJ" />
+        <input id="icont" placeholder="Contato" />
+        <button class="btn">Salvar</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">Lista de Instituições</div>
+      <table class="table" id="instTable">
+        <thead><tr><th>ID</th><th>Nome</th><th>Contato</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><small>MVP acadêmico</small></div></footer>
+</body>
+</html>
